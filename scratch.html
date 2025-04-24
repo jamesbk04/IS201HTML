@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>James' World Tour</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --main-bg: #f0f2f5;
+      --header-bg: #a9cce3;
+      --nav-bg: #d6eaf8;
+      --text-color: #2e2e2e;
+    }
+
+    body {
+      font-family: var(--bs-body-font-family);
+      background-color: var(--main-bg);
+      color: var(--text-color);
+    }
+
+    header {
+      background-color: var(--header-bg);
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    nav {
+      background-color: var(--nav-bg);
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #2980b9;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .section-title {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .info-box {
+      background-color: #f8f9fa;
+      border: 1px solid #dee2e6;
+      border-radius: 8px;
+      padding: 15px 20px;
+      margin-top: 20px;
+    }
+
+    .info-box ul {
+      margin-left: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: var(--header-bg);
+      color: var(--text-color);
+      margin-top: 40px;
+    }
+
+    .back-to-top {
+      display: block;
+      text-align: center;
+      margin-top: 30px;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+    .play-game {
+      display: block;
+      text-align: center;
+      margin-top: 30px;
+      font-weight: bold;
+      padding: 10px;
+    }
+   
+    .video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Max width to prevent it from growing too large */
+    height: 0;
+    padding-bottom: 50%; /* 16:9 Aspect Ratio */
+    margin: 0 auto; /* Center the container */
+  }
+
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 60%;
+  }
+
+  h3{
+    text-align: center;
+  }
+  
+
+  </style>
+</head>
+<body id="top">
+
+  <header>
+    <h1>James' World Tour</h1>
+    <p>Explore the world, meet new people, change lives </p>
+  </header>
+
+  <nav>
+    
+    <a href="resume.html">Back to original site</a>
+   
+    
+  </nav>
+
+  <div class="container">
+    <h2 class="section-title">Favorite Places I've Been</h2>
+    <div class="info-box">
+      <ol>
+        <li>
+          Brazil
+          <ul>
+            <li>Rio de Janeiro</li>
+          </ul>
+        </li>
+        <li>
+          Paraguay
+          <ul>
+            <li>Yby Yaú</li>
+            <li>Pedro Juan Caballero</li>
+            <li>Asunción</li>
+          </ul>
+        </li>
+        <li>
+          Mexico
+          <ul>
+            <li>Mexico City</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+
+    <h2 class="section-title">Highlights</h2>
+    <div class="info-box">
+      <ul>
+        <li>Being able to meet thousands of people and connect with them on a personal level.</li>
+        <li>Being able to serve and blessing the lives of others.</li>
+        <li>Gain a better understanding of many distinct cultures.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Image Section at the Bottom -->
+  <div class="container">
+    <h2 class="section-title">Gallery</h2>
+    <div class="row">
+      <!-- Image 1 -->
+      <div class="col-4">
+        <img src="assets/riodejaneiro.png" alt="Image 1" class="img-fluid">
+      </div>
+      <!-- Image 2 -->
+      <div class="col-4">
+        <img src="assets/py.png" alt="Image 2" class="img-fluid">
+      </div>
+      <!-- Image 3 -->
+      <div class="col-4">
+        <img src="assets/ybyyau.png" alt="Image 3" class="img-fluid">
+      </div>
+    </div>
+  </div>
+
+  <!-- New Box: Things to know when visiting other countries -->
+  <div class="container">
+    <h2 class="section-title">Things To Know When Visiting Other Countries</h2>
+    <div class="info-box">
+      <ol>
+        <li>
+          How to Greet People
+          <ul>
+            <li>While in Spanish speaking countries, say, "Hola, cómo estás?" This means, "Hi, how are you doing?"</li>
+            <li>While in Brazil, say, "Olá, como você está?" This also means, "Hello, how are you doing?"</li>
+          </ul>
+        </li>
+        <li>
+          How to Ask for Help
+          <ul>
+            <li>While in Spanish speaking countries, say, "Necesito ayuda." This means, "I need help."</li>
+            <li>While in Brazil, say, "Preciso de ajuda." This also means, "I need help."</li>
+          </ul>
+        </li>
+        <li>
+          How to End a Conversation
+          <ul>
+            <li>While in Spanish speaking countries, say, "Fue un gusto conocerte, adios." This means, "It was nice meeting you, goodbye."</li>
+            <li>While in Brazil, say, "Muito prazer, tchau." This means, "Pleasure meeting you, goodbye."</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+  </div>
+<br>
+<h3>Basic Vocabulary in Portuguese</h3>
+<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/qV_9jbZn2H8" 
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+  </iframe>
+</div>
+
+
+<h3>Tableau Visualization</h3>
+
+<div class="center-container">
+  <div class='tableau-container' id='viz1745470797108' style='position: relative'>
+    <noscript>
+      <a href='#'>
+        <img alt='Number of Spanish speakers who speak English less than "very well"'
+             src='https://public.tableau.com/static/images/ZH/ZH6C8MNBH/1_rss.png'
+             style='border: none' />
+      </a>
+    </noscript>
+    <object class='tableauViz' style='display:none;'>
+      <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+      <param name='embed_code_version' value='3' />
+      <param name='path' value='shared%2FZH6C8MNBH' />
+      <param name='toolbar' value='yes' />
+      <param name='static_image' value='https://public.tableau.com/static/images/ZH/ZH6C8MNBH/1.png' />
+      <param name='animate_transition' value='yes' />
+      <param name='display_static_image' value='yes' />
+      <param name='display_spinner' value='yes' />
+      <param name='display_overlay' value='yes' />
+      <param name='display_count' value='yes' />
+      <param name='language' value='en-US' />
+    </object>
+  </div>
+</div>
+
+<script type='text/javascript'>
+  var divElement = document.getElementById('viz1745470797108');
+  var vizElement = divElement.getElementsByTagName('object')[0];
+  vizElement.style.width = '80%';  // Adjust width to 80% of its container (smaller)
+  vizElement.style.height = (divElement.offsetWidth * 0.5) + 'px';  // Adjust height to 50% of width (smaller)
+  
+  var scriptElement = document.createElement('script');
+  scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+  vizElement.parentNode.insertBefore(scriptElement, vizElement);
+</script>
+
+  <br>
+
+
+
+  <footer>
+    <p>&copy; 2025 James' World Tour.</p>
+  </footer>
+
+  <!-- Back to Top Anchor -->
+  <a href="game.html" class="play-game">Play vacation game</a>
+  <a href="#top" class="back-to-top">Back to Top</a>
+ 
+
+</body>
+</html>

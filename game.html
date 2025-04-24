@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Vacation Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+        }
+
+        .container {
+            margin-top: 100px; /* Increased margin-top to create space between the back button and the game box */
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h1 {
+            color: #3498db;
+            font-size: 42px; /* Increased font size */
+            font-weight: bold; /* Bold font */
+        }
+
+        .box {
+            margin: 20px auto;
+            padding: 30px;
+            background-color: #ecf0f1;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 500px;
+            font-size: 24px;
+            color: #2c3e50;
+            display: none;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #3498db;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 10px; /* Slightly adjust position */
+            padding: 8px 16px; /* Made the button smaller */
+            background-color: #e74c3c;
+            color: #fff;
+            font-size: 16px; /* Smaller font size */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .back-btn:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+    <a href="scratch.html" class="back-btn">Back to Previous Page</a>
+    <div class="container">
+        <h1>The Vacation Game</h1>
+
+        <div class="box" id="resultBox">
+            <div id="continentName"></div>
+        </div>
+
+        <button id="startGameBtn">Play</button>
+    </div>
+
+    <script>
+        const continents = [
+            "North America", 
+            "South America", 
+            "Australia", 
+            "Antarctica", 
+            "Asia", 
+            "Africa", 
+            "Europe"
+        ];
+
+        const startGameBtn = document.getElementById("startGameBtn");
+        const resultBox = document.getElementById("resultBox");
+        const continentName = document.getElementById("continentName");
+
+        startGameBtn.addEventListener("click", startGame);
+
+        function startGame() {
+            startGameBtn.style.display = "none"; // Hide the "Play" button
+            resultBox.style.display = "block"; // Show the result box
+            continentName.innerHTML = "Loading...";
+
+            let timer = 0;
+            const interval = setInterval(() => {
+                const randomIndex = Math.floor(Math.random() * continents.length);
+                continentName.innerHTML = continents[randomIndex];
+                timer++;
+
+                if (timer >= 20) {
+                    clearInterval(interval);
+                    const randomWinner = continents[Math.floor(Math.random() * continents.length)];
+                    continentName.innerHTML = `Congratulations, you won a vacation to ${randomWinner}!`;
+                }
+            }, 200); // Every 200 milliseconds, change to a new continent
+
+            setTimeout(() => {
+                const randomWinner = continents[Math.floor(Math.random() * continents.length)];
+                continentName.innerHTML = `Congratulations, you won a vacation to ${randomWinner}!`;
+                startGameBtn.style.display = "inline-block"; // Show the "Play" button again
+            }, 4000); // After 4 seconds, show the result
+        }
+    </script>
+</body>
+</html>
